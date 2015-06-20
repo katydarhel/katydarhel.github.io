@@ -18,3 +18,8 @@
     color: #646469;
     text-align: justify;
 }
+
+@font-face {
+    font-family:"Franklin";
+    src: url("font/Franklin.ttf")
+}
