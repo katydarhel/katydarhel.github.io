@@ -11,3 +11,23 @@ defaults:
     values:
       layout: default
       lang: ru
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+
+msg:
+  en:
+    why: "Why ThoriumSoft"
+    pricing: "Pricing"
+    customers: "Customers"
+    contacts: "Contacts"
+    routeplanner: "Service RoutePlanner"
+  ru:
+    why: "Почему мы?"
+    pricing: "Цены"
+    customers: "Клиенты"
+    contacts: "Контакты"
+    routeplanner: "Сервис RoutePlanner"
