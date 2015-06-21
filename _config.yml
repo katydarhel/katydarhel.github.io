@@ -1,0 +1,13 @@
+defaults:
+  -
+    scope:
+      path: en
+    values:
+      layout: default
+      lang: en
+  -
+    scope:
+      path: ru
+    values:
+      layout: default
+      lang: ru
