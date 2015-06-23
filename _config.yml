@@ -24,10 +24,10 @@ msg:
     pricing: "Pricing"
     customers: "Customers"
     contacts: "Contacts"
-    routeplanner: "Service RoutePlanner"
+    routeplanner: "RoutePlanner"
   ru:
     why: "Почему мы?"
     pricing: "Цены"
     customers: "Клиенты"
     contacts: "Контакты"
-    routeplanner: "Сервис RoutePlanner"
+    routeplanner: "RoutePlanner"
