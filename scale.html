@@ -7,7 +7,9 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <style>
         .wrapper {
+            display: inline-block;
             position: relative;
+            max-width: 100%;
         }
 
         .wrapper .overlay {
@@ -24,10 +26,11 @@
             var width = $("#image").width();
             $(".overlay").css({'font-size': width / 30});
         }
-
-        $(document).ready(function () {
+        $(window).load(function () {
             setFontSize();
+            console.log("load");
             $(window).resize(function () {
+                console.log("resize");
                 setFontSize();
             });
         });
