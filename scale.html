@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .wrapper {
+            display: inline-block;
+            position: relative;
+        }
+
+        .wrapper .overlay {
+            position: absolute;
+            top: 19%;
+            left: 26%;
+        }
+    </style>
+    <script>
+        function setFontSize() {
+            var width = $("#image").width();
+            $(".overlay").css({'font-size': width / 30});
+        }
+
+        $(document).ready(function () {
+            setFontSize();
+            $(window).resize(function () {
+                setFontSize();
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="wrapper">
+    <img id="image" class="img-responsive" src="images/banner_Service_to_optimize.jpg" alt=""/>
+
+    <div class="overlay"
+         style="font-family:Franklin, monospace; font-weight:normal; font-size: 3.5vw; color:#01ca9e; line-height:1;/">
+        <p>Сервис для оптимизации</p>
+
+        <p>распределительной логистики</p>
+    </div>
+</div>
+</body>
+</html>
