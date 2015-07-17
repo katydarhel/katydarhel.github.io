@@ -38,8 +38,8 @@ msg:
     index2: "
         <p>Так как, сервис <strong>RoutePlanner</strong> - это web приложение, все что необходимо — это подключиться
            к сети Интернет, внести адреса контрагентов, информацию об автопарке и информацию о заказах – все остальное сервис
-           сделает за Вас. Мы разработали максимально простой и дружелюбный интерфейс. Даже сложные операции выполняются в “два
-           клика”. <strong>Расчет маршрута занимает всего 10-15 секунд.</strong>
+           сделает за Вас. Мы разработали максимально простой и дружелюбный интерфейс. Даже сложные операции выполняются в \"два
+           клика\". <strong>Расчет маршрута занимает всего 10-15 секунд.</strong>
            Следовательно, Вы сможете легко планировать графики развоза на много дней вперед.</p>"
     index3: "
         <p>Использование высококачественных алгоритмов оптимизации, разработанных специально для решения
@@ -146,10 +146,10 @@ msg:
     faq2: "
         <h3>Сколько это стоит?</h3>
         <p>Стоимость использования сервиса рассчитывается от того количества транспорта, которое вы планируете использовать каждый день.
-        Подробности можно узнать в разделе Цены.</p>"
+        Подробности можно узнать в разделе <a href=\"/pricing.html\">Цены</a>.</p>"
     faq3: "
         <h3>Как начать использовать сервис RoutePlanner?</h3>
-        <p>Очень просто, для этого необходимо связаться с нами. Контактная информация находится здесь.</p>"
+        <p>Очень просто, для этого необходимо связаться с нами. Контактная информация находится <a href=\"/contacts.html\">здесь</a>.</p>"
     faq4: "
         <h3>Как быстро происходит расчет маршрутов?</h3>
         <p>Время расчета маршрутов зависит от количества автотранспорта, точек посещения, введенных ограничений и проч.
@@ -175,12 +175,12 @@ msg:
             <li>Учет временных окон доставки заказа</li>
             <li>Повышение уровня обслуживания клиентов</li>
             <li>Сокращение сроков поставки</li>
-            <li>Отказ от “ручного” расчета и планирования</li>
+            <li>Отказ от \"ручного\" расчета и планирования</li>
             <li>Нет необходимости инвестировать значительные средства на приобретение, обновление и поддержку работоспособности ПО и аппаратной платформы</li>
             <li>Стоимость внедрения составляет 0.0</li>
         </ul>
 
-        Если у вас появились любые вопросы, пожалуйста свяжитесь с нами: <a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a>"
+        Если у вас появились любые вопросы, пожалуйста свяжитесь с нами: <a href=\"mail:support@thoriumsoft.com\">support@thoriumsoft.com</a>"
     pricing1: "
       <h3>Стоимость услуг</h3>
       <p>Сервис поставляется в формате SaaS (Сервис в аренду). Вы платите ежемесячную плату и используете все возможности сервиса <strong>RoutePlanner</strong>.</p>"
@@ -205,9 +205,9 @@ msg:
         это поможет взглянуть на транспортные потоки в Вашей компании под другим углом. Логистика станет ближе и нагляднее.</p>
         <p><strong>Логистика может быть простой!</strong></p>
         <p>С уважением, разработчики <strong>RoutePlanner</strong></p>
-        <p><a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a></p>
+        <p><a href=\"mail:support@thoriumsoft.com\">support@thoriumsoft.com</a></p>
         <hr/>
-        <div style='float:right'>
+        <div style=\"float:right\">
             <p><strong>Республика Беларусь</strong>, г. Минск, +375(29)7785023</p>
         </div>
         <div>
@@ -241,7 +241,7 @@ msg:
        <p>Since the service <strong>RoutePlanner</strong> is a web application, all that is needed - is to connect to the
           Internet to address counterparty information about the fleet and order information - everything else the
           service will do for you. We have developed the most simple and user-friendly interface. Even complex
-          operations are performed in “two clicks“.<strong> Route calculation takes only 10-15 seconds.</strong> Therefore, you can
+          operations are performed in \"two clicks\".<strong> Route calculation takes only 10-15 seconds.</strong> Therefore, you can
           easily plan graphs hydrating for many days to come.</p>"
     index3: "
        <p>The use of high-quality optimization algorithms developed specifically to address the transport operations, will allow
@@ -297,13 +297,13 @@ msg:
                 worked for a long time (10 minutes). Although it should be noted that to solve small problems (up to 100 orders), such
                 decision will give good results in short time.</p>
 
-            <p>Our innovative algorithm for calculating a 'know-how' of our company and faster than the any other solutions. For
+            <p>Our innovative algorithm for calculating a \"know-how\" of our company and faster than the any other solutions. For
                 example, to route orders in <strong>2000</strong> and a fleet of <strong>200</strong> vehicles, taking into account
                 all possible restrictions will be counted and is optimized for approximately <strong>40 seconds</strong>, 1000 orders and 100
                 vehicles - about 10 seconds.</p>
 
             <p>Such indicators allow speed quickly recalculates the route if you change any of the characteristics calculation (add the order,
-                the car was in the repair, new 'desired delivery windows' and so on). And makes the manual planning ineffective and even
+                the car was in the repair, new \"desired delivery windows\" and so on). And makes the manual planning ineffective and even
                 harmful. Our experience in implementing fully proved the thesis.</p>"
     characteristics2: "
         <h3>SOME OF THE CONDITIONS AND RESTRICTIONS OF CALCULATION:</h3>
@@ -330,8 +330,8 @@ msg:
         </ul>"
     ddt1: "
         <p>For any company, it is important to use client-oriented approach. For distribution companies this means keeping
-            promises for product delivery by a certain time, which is given by the client. Obviously, the longer is the 'desired time
-            window', the harder logisticians to make the flight. At this point, there are differences between sales and logistics.</p>
+            promises for product delivery by a certain time, which is given by the client. Obviously, the longer is the \"desired time
+            window\", the harder logisticians to make the flight. At this point, there are differences between sales and logistics.</p>
 
         <p>Service <strong>RoutePlanner</strong> can solve this problem spending a minimum of effort on planning and controversy. Sales
             department in the formation of applications simply specifies the desired delivery time, which will automatically be taken
@@ -340,7 +340,7 @@ msg:
         <p>Just one of the ways to increase the loyalty of a parameter VIP-clients. If such clients routes formed so the the
             VIP-clients visit first.</p>
 
-        <p>Using the 'desired delivery time' and VIP-client functions are optional, but their use will undoubtedly increase customer
+        <p>Using the \"desired delivery time\" and VIP-client functions are optional, but their use will undoubtedly increase customer
             loyalty to the company.</p>"
     faq1: "
         <h3>FOR WHICH COMPANIES SERVICE DESIGNED ROUTEPLANNER?</h3>
@@ -349,10 +349,10 @@ msg:
     faq2: "
         <h3>HOW MUCH DOES THAT COST?</h3>
         <p>The cost of using the service is calculated from the amount of transport that you want to use every day. Details can be
-            found in the price.</p>"
+            found in the <a href=\"/en/pricing.html\">Pricing</a>.</p>"
     faq3: "
         <h3>HOW TO START TO USE THE SERVICE ROUTEPLANNER?</h3>
-        <p>Very simply, it is necessary to contact us. Contact information ca be found here.</p>"
+        <p>Very simply, it is necessary to contact us. Contact information ca be found <a href=\"/en/contacts.html\">here</a>.</p>"
     faq4: "
         <h3>HOW LONG DOES IT CALCULATE ROUTE?</h3>
         <p>When calculating your route depends on the number of vehicles, visit points imposed constraints and so on.
@@ -384,7 +384,7 @@ msg:
             <li>Zero cost of embedding</li>
         </ul>
 
-        If you have any questions please contact <a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a>"
+        If you have any questions please contact <a href=\"mail:support@thoriumsoft.com\">support@thoriumsoft.com</a>"
     pricing1: "
       <h3>Cost of Services</h3>
       <p>Service is delivered in the format of SaaS (Service rent). You pay a monthly fee and use all the features of the service
@@ -411,9 +411,9 @@ msg:
             Logistics will become closer and clearer.</p>
         <p><strong>Logistics can be simple!</strong></p>
         <p>Sincerely, developers <strong>RoutePlanner</strong></p>
-        <p><a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a></p>
+        <p><a href=\"mail:support@thoriumsoft.com\">support@thoriumsoft.com</a></p>
         <hr/>
-        <div style='float:right'>
+        <div style=\"float:right\">
             <p><strong>The Republic of Belarus</strong>, Minsk, Lynkova 87A, 1.</p>
             <p>+375 (29) 7785023</p>
         </div>
