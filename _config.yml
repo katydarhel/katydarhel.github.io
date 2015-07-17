@@ -345,7 +345,8 @@ msg:
     faq1: "
         <h3>FOR WHICH COMPANIES SERVICE DESIGNED ROUTEPLANNER?</h3>
         <p>Companies whose business process required to implement daily flights with a lot of points visits/unloading. Group
-            companies FMCG (Fast Moving Consumer Goods), collections, company service, mail, garbage, online shopping and so on.</p>"
+            companies <strong>FMCG</strong> (<strong>F</strong>ast <strong>M</strong>oving <strong>C</strong>onsumer <strong>G</strong>oods),
+            collections, company service, mail, garbage, online shopping and so on.</p>"
     faq2: "
         <h3>HOW MUCH DOES THAT COST?</h3>
         <p>The cost of using the service is calculated from the amount of transport that you want to use every day. Details can be
