@@ -50,6 +50,8 @@
     line-height: 1;
     left: 25%;
     bottom: 0;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .label-overlay {
@@ -76,6 +78,6 @@ h3 {
     margin: 20px;
 }
 
-#contacts img {
+#customers img {
     padding: 0;
 }
