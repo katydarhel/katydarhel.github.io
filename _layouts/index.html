@@ -41,9 +41,9 @@ layout: default
 
 <script>
     $(window).load(function () {
-        setFontSize("resize-label", 30);
+        setFontSize(".resize-label", 30);
         $(window).resize(function () {
-            setFontSize();
+            setFontSize(".resize-label", 30);
         });
     });
 </script>
