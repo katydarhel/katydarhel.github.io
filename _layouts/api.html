@@ -1,0 +1,390 @@
+---
+layout: default
+---
+
+<div class="container text">
+    <h3>Описание REST API для оптимизации маршрутов</h3>
+
+    <p>Запрос отправляется методом POST в кодировке UTF-8 по адресу
+        <strong>http://routeplanner.thoriumsoft.com/api/v1/opt?key=AAAA-AAAA-AAAA-AAAA</strong></p>
+
+    <p>Для отладки можно использовать команду curl —data-binary @request.json
+        "http://routeplanner.thoriumsoft.com/api/v1/opt?key=AAAA-AAAA-AAAA-AAAA", файл request.json содержит запрос:</p>
+
+    <pre>
+{
+  "counterAgents": [
+    {
+      "id": "client-1",
+      "lat": 53.847094,
+      "lon": 27.589838,
+      "serviceTimeWindows": [
+        {
+          "startTimeMin": 480,
+          "stopTimeMin": 1080,
+          "serviceTimeMin": 15
+        }
+      ],
+      "vip": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-1",
+      "counterAgentId": "client-1",
+      "weight": 100,
+      "volume": 25,
+      "deliverAfterMin": 480,
+      "deliverBeforeMin": 1080
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "vehicle-1",
+      "weight": 2000,
+      "volume": 1000,
+      "tags": ["frost"],
+      "returnToWarehouse": true,
+      "maxWorkingTimeMin": 600,
+      "speedFactor": 0.7,
+      "maxWayPoints": 8
+    }
+  ],
+  "warehouseLat": 53.947094,
+  "warehouseLon": 27.689838
+}
+    </pre>
+
+    <table class="table table-hover">
+        <caption><strong>Request</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+            <th>Значение по умолчанию</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>counterAgents*</td>
+            <td>Array of CounterAgent</td>
+            <td>Массив контрагентов</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>orders*</td>
+            <td>Array of Order</td>
+            <td>Массив заказов</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>vehicles*</td>
+            <td>Array of Vehicle</td>
+            <td>Массив автомобилей</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>warehouseLat*</td>
+            <td>Double</td>
+            <td>Широта склада</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>warehouseLon*</td>
+            <td>Double</td>
+            <td>Долгота склада</td>
+            <td>-</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <caption><strong>CounterAgent</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+            <th>Значение по умолчанию</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id*</td>
+            <td>String</td>
+            <td>Связь с Order</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>lat*</td>
+            <td>Double</td>
+            <td>Широта</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>lon*</td>
+            <td>Double</td>
+            <td>Долгота</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>vip</td>
+            <td>Boolean</td>
+            <td>Vip-клиент (доставка в первую очередь)</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>serviceTimeWindows*</td>
+            <td>Массив из ServiceTime</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <caption><strong>Order</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+            <th>Значение по умолчанию</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id*</td>
+            <td>String</td>
+            <td>Идентификация в ответе</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>counterAgentId*</td>
+            <td>String</td>
+            <td>Ссылка на CounterAgent</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>Integer</td>
+            <td>Вес заказа</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>volume</td>
+            <td>Integer</td>
+            <td>Объём заказа</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>deliverAfterMin</td>
+            <td>Integer</td>
+            <td>Доставить после</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>deliverBeforeMin</td>
+            <td>Integer</td>
+            <td>Доставить до</td>
+            <td>1440</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <caption><strong>Vehicle</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+            <th>Значение по умолчанию</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id*</td>
+            <td>String</td>
+            <td>Идентификация в response</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>Integer</td>
+            <td>Грузоподъёмность</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>volume</td>
+            <td>Integer</td>
+            <td>Максимальный объём</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>tags</td>
+            <td>Array of String</td>
+            <td>Теги</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>returnToWarehouse</td>
+            <td>Boolean</td>
+            <td>Возвращаться на склад в конце маршрута</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>maxWorkingTimeMin</td>
+            <td>Integer</td>
+            <td>Максимальное время работы водителя</td>
+            <td>1440</td>
+        </tr>
+        <tr>
+            <td>speedFactor</td>
+            <td>Double</td>
+            <td>Коэффициент скоростей</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>maxWayPoints</td>
+            <td>Integer</td>
+            <td>Максимальное количество точек в маршруте</td>
+            <td>-</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <pre>
+{
+  "routes": [
+    {
+      "routeSteps": [
+        {
+          "arrivalTimeMin": 454,
+          "departureTimeMin": 454,
+          "status": "0"
+        },
+        {
+          "orderId": "order-1",
+          "arrivalTimeMin": 480,
+          "departureTimeMin": 495,
+          "status": "0"
+        },
+        {
+          "arrivalTimeMin": 519,
+          "departureTimeMin": 519,
+          "status": "0"
+        }
+      ],
+      "vehicleId": "vehicle-1",
+      "weight": 10.0,
+      "volume": 25.0,
+      "startTimeMin": 454,
+      "stopTimeMin": 519,
+      "status": "0"
+    }
+  ]
+}
+    </pre>
+
+
+    <table class="table table-hover">
+        <caption><strong>Response</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>routes</td>
+            <td>Array of Route</td>
+            <td>Массив маршрутов</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <caption><strong>Route</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>routeSteps</td>
+            <td>Array of RouteStep</td>
+            <td>Массив точек маршрута</td>
+        </tr>
+        <tr>
+            <td>vehicleId</td>
+            <td>Integer</td>
+            <td>Ссылка на автомобиль</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>Integer</td>
+            <td>Суммарный вес</td>
+        </tr>
+        <tr>
+            <td>volume</td>
+            <td>Integer</td>
+            <td>Суммарный объём</td>
+        </tr>
+        <tr>
+            <td>startTimeMin</td>
+            <td>Integer</td>
+            <td>Время начала маршрута</td>
+        </tr>
+        <tr>
+            <td>stopTimeMin</td>
+            <td>Integer</td>
+            <td>Время окончания маршрута</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>String</td>
+            <td>Статус маршрута</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <caption><strong>RouteStep</strong></caption>
+        <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Тип</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>orderId</td>
+            <td>String</td>
+            <td>Ссылка на заказ</td>
+        </tr>
+        <tr>
+            <td>arrivalTimeMin</td>
+            <td>Integer</td>
+            <td>Время прибытия</td>
+        </tr>
+        <tr>
+            <td>departureTimeMin</td>
+            <td>Integer</td>
+            <td>Время отправления</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>String</td>
+            <td>Статус</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
