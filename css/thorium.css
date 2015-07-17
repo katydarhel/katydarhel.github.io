@@ -8,7 +8,7 @@
 }
 
 .text {
-    font-family: Open Sans, serif;
+    font-family: Open Sans, serif; /*Tunga*/
     font-style: normal;
     font-size: 17px;
     line-height: 1.8;
@@ -16,22 +16,14 @@
     text-align: justify;
 }
 
-.text-en {
-    font-family: Tunga, Open Sans, serif;
-    font-style: normal;
-    font-size: 22px;
-    color: #646469;
-    text-align: justify;
-}
-
 @font-face {
     font-family: "Franklin";
-    src: url("font/Franklin.ttf")
+    src: url("../font/Franklin.ttf")
 }
 
 @font-face {
     font-family: "MagistralC";
-    src: url("font/MagistralC.ttf")
+    src: url("../font/MagistralC.ttf")
 }
 
 .en:lang(en), .ru:lang(ru) {

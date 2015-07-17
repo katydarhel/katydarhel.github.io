@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/thorium.css">
+    <link rel="stylesheet" href="/css/thorium.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext,cyrillic,cyrillic-ext" type="text/css" media="all" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-        function setCaptionFontSize() {
-            $(".image-wrapper").each(function () {
+        function setFontSize(selector, divide) {
+            $(selector).each(function () {
                 var width;
                 $(this).children().each(function (index) {
                     if (index === 0) {
                         width = $(this).width();
                     } else {
-                        $(this).css({'font-size': width / 40});
+                        $(this).css({'font-size': width / divide});
                     }
                 });
             });
         }
         $(window).load(function () {
-            setCaptionFontSize();
+            setFontSize("resize-caption", 40);
             $(window).resize(function () {
-                setCaptionFontSize();
+                setFontSize("resize-caption", 40);
             });
         });
     </script></head>
