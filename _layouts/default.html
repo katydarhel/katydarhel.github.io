@@ -6,13 +6,34 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/thorium.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext,cyrillic,cyrillic-ext" type="text/css" media="all" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
+    <script>
+        function setCaptionFontSize() {
+            $(".image-wrapper").each(function () {
+                var width;
+                $(this).children().each(function (index) {
+                    if (index === 0) {
+                        width = $(this).width();
+                    } else {
+                        $(this).css({'font-size': width / 40});
+                    }
+                });
+            });
+        }
+        $(window).load(function () {
+            setCaptionFontSize();
+            $(window).resize(function () {
+                setCaptionFontSize();
+            });
+        });
+    </script></head>
 <body>
 
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
-    <div style="float: right; font-size: 18px; padding-top: 20px; padding-right: 20px;"><a href="/ru">RU</a> <a href="/en">EN</a></div>
+    <div style="float: right; font-size: 18px; padding: 20px; margin-top:4px;">
+        <a class="ru" href="{{page.url|remove:'/en'}}" style="text-decoration: none;">RU</a> <a class="en" href="/en{{page.url|remove:'/en'}}" style="text-decoration: none;">EN</a></div>
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" style="height: 70px; padding-left: 0; margin-top: -7px;" href="/">
@@ -30,19 +51,19 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="/index.html"
                        style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">
-                        Product<span class="caret"></span>
+                        {{site.msg[page.lang].product}}<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/capabilities.html">Capabilities</a></li>
-                        <li><a href="/algorithm-characteristics.html">Algorithm characteristics</a></li>
-                        <li><a href="/ddt.html">Desired delivery time</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/capabilities.html">{{site.msg[page.lang].capabilities}}</a></li>
+                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/characteristics.html">{{site.msg[page.lang].characteristics}}</a></li>
+                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/ddt.html">{{site.msg[page.lang].ddt}}</a></li>
+                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/faq.html">{{site.msg[page.lang].faq}}</a></li>
                     </ul>
                 </li>
-                <li><a href="/why.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].why}}</a></li>
-                <li><a href="/pricing.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].pricing}}</a></li>
-                <li><a href="/customers.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].customers}}</a></li>
-                <li><a href="/contacts.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].contacts}}</a></li>
+                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/why.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].why}}</a></li>
+                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/pricing.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].pricing}}</a></li>
+                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/customers.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].customers}}</a></li>
+                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/contacts.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].contacts}}</a></li>
                 <li><a href="http://routeplanner.thoriumsoft.com" style="line-height: 40px; font-size: 18px; padding-left: 11px;padding-right: 11px;">{{site.msg[page.lang].routeplanner}}</a></li>
                 <!--a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-\h"></span> Search</a-->
             </ul>
@@ -53,26 +74,24 @@
 {{content}}
 
 <div class="container-fluid text-center block-margin" style="background: #dbe4f4;padding-top: 20px;padding-bottom: 20px;">
-    <p><strong>Get Started Today</strong></p>
-    <button type="button" class="btn btn-warning" style="text-transform: uppercase;">Start trial</button>
-    <a href="/contacts.html" type="button" class="btn btn-info" style="text-transform: uppercase;"> Contact sales</a>
+    <p><strong>{{site.msg[page.lang].getStartedToday}}</strong></p>
+    <button type="button" class="btn btn-warning" style="text-transform: uppercase;">{{site.msg[page.lang].startTrial}}</button>
+    <a href="/contacts.html" type="button" class="btn btn-info" style="text-transform: uppercase;">{{site.msg[page.lang].contactSales}}</a>
 </div>
 
 <div class="container-fluid footer">
     <div class="container footer">
-        <div style="display:inline-block;color:#4AD1D5; font-size:20px; border-bottom:1px solid #4AD1D5; padding-bottom:1px;">
-            Product information
-        </div>
+        <div style="display:inline-block;color:#4AD1D5; font-size:20px; border-bottom:1px solid #4AD1D5; padding-bottom:1px;">{{site.msg[page.lang].productInformation}}</div>
         <div></div>
         <div style="margin-top:15px;border-bottom:2px solid white; padding-bottom:5px;font-weight: bold;font-size:18px;">
-            <a style="color:white;" href="/capabilities.html">Capabilities</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="/algorithm-characteristics.html">Characteristics of the algorithm</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="/ddt.html">Desired delivery time</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="/faq.html">FAQ</a>
+            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/capabilities.html">{{site.msg[page.lang].capabilities}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/characteristics.html">{{site.msg[page.lang].characteristics}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/ddt.html">{{site.msg[page.lang].ddt}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/faq.html">{{site.msg[page.lang].faq}}</a>
         </div>
         <div style="margin-top: 20px;">
             <img src="/images/ThoriumSoft_logo_gray.png">
-            <span style="margin-left:20px; font-size: 11px;color:#B3C4CB;">@ Copyright 2015 ThoriumSoft. All rights reserved. Use of this web site constitutes acceptance of The Terms of Use and Privacy Policy.</span>
+            <span style="margin-left:20px; font-size: 11px;color:#B3C4CB;">{{site.msg[page.lang].copyright}}</span>
         </div>
     </div>
 </div>

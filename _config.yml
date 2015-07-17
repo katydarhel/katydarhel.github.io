@@ -1,33 +1,424 @@
 defaults:
   -
     scope:
-      path: en
-    values:
-      layout: default
-      lang: en
-  -
-    scope:
-      path: ru
+      path: ""
     values:
       layout: default
       lang: ru
   -
     scope:
-      path: ""
+      path: en
     values:
       layout: default
       lang: en
 
 msg:
-  en:
-    why: "Why ThoriumSoft"
-    pricing: "Pricing"
-    customers: "Customers"
-    contacts: "Contacts"
-    routeplanner: "RoutePlanner"
   ru:
+    product: "О продукте"
+    capabilities: "Возможности"
+    characteristics: "Характеристики алгоритма"
+    ddt: "Желаемое время доставки"
+    faq: "FAQ"
     why: "Почему мы?"
     pricing: "Цены"
     customers: "Клиенты"
     contacts: "Контакты"
     routeplanner: "RoutePlanner"
+    getStartedToday: "ПОПРОБОВАТЬ СЕГОДНЯ"
+    startTrial: "Попробовать бесплатно"
+    contactSales: "Контакты"
+    productInformation: "Информация о продукте"
+    copyright: "@ ООО ТориумСофт, 2015."
+    index1: "
+        <p>Сервис <strong>RoutePlanner</strong>, предоставляемый компанией <strong>ТориумСофт</strong>, позволяет
+            эффективно рассчитать маршруты и график перевозок,
+            снизить транспортные расходы и повысить эффективность автомобильного парка.</p>
+        <p>Программное обеспечение компании <strong>ТориумСофт</strong> можно легко настроить для обработки широкого
+            спектра транспортных ограничений, которые возникают при работе.</p>"
+    index2: "
+        <p>Так как, сервис <strong>RoutePlanner</strong> - это web приложение, все что необходимо — это подключиться
+           к сети Интернет, внести адреса контрагентов, информацию об автопарке и информацию о заказах – все остальное сервис
+           сделает за Вас. Мы разработали максимально простой и дружелюбный интерфейс. Даже сложные операции выполняются в “два
+           клика”. <strong>Расчет маршрута занимает всего 10-15 секунд.</strong>
+           Следовательно, Вы сможете легко планировать графики развоза на много дней вперед.</p>"
+    index3: "
+        <p>Использование высококачественных алгоритмов оптимизации, разработанных специально для решения
+           транспортных операций, позволит с максимальной точностью обеспечить эффективную доставку грузов,
+           рассчитать точное время в пути и оптимально использовать время водителей.</p>"
+    index5: "Сервис для оптимизации"
+    index6: "распределительной логистики"
+    index7: "Хотите увеличить доход"
+    index8: "и сэкономить время?"
+    capabilities0: "
+          <p>Мы постоянно добавляем новые функциональные возможности основываясь на пожеланиях наших клиентов.
+            <strong>Весь</strong> добавленный функционал сразу <strong>становится доступен</strong> остальным клиентам нашего сервиса без дополнительных доплат.
+            Ниже перечислены лишь некоторые возможности сервиса <strong>RoutePlanner</strong>.</p>"
+    capabilities1: "
+            <h3>Автоматическое планирование перемещения товаров и грузов</h3>
+            <p>Автоматическое планирование перемещения товаров и грузов позволяет
+            <strong>дистрибьютерским/курьерским/сервисным</strong> компаниям кардинально сократить время планирования.</p>
+
+            <p>Используя сервис <strong>RoutePlanner</strong> появляется возможность автоматически формировать маршруты
+            для всех единиц транспорта вашего автопарка одновременно, причем будет выбрано оптимальное количество машин,
+            с учетом множества ограничений, которые довольно трудно проконтролировать человеку.</p>"
+    capabilities2: "
+            <h3>Оптимизация маршрутов движения транспорта</h3>
+            <p>Результатом работы алгоритма автоматического планирования, являются оптимизированные маршруты для каждой
+            единицы транспорта, с указанием порядка посещения контрагентов в одном рейсе и с указанием планируемого времени прибытия.</p>"
+    capabilities3: "
+            <h3>Контроль объемно-весовых характеристик транспортных средств</h3>
+            <p>При расчете оптимальных маршрутов, в обязательном порядке учитываются габариты груза (вес, объем) и ведется контроль загрузки кузова.</p>"
+    capabilities4: "
+            <h3>Автоматическое геокодирование адресов контрагентов</h3>
+            <p>Все имеющиеся адреса контрагентов можно загрузить в систему автоматически. <strong>RoutePlanner</strong> распознает большинство адресов.
+            В случае, если адрес задан некорректно, либо его еще нет на карте (новые улицы, новые магазины и проч.),
+            система пометит их и предложит пользователю произвести ручную корректировку. Режим ручной корректировки имеет
+            очень простой и удобный интерфейс, система постоянно помогает пользователю в этом режиме, так что ручное редактирование не займет много времени.</p>"
+    capabilities5: "
+            <h3>Модуль мониторинга транспорта</h3>
+            <p>Модуль мониторинга транспорта работает на смартфонах водителей, осуществляющих доставку, и позволяет получать следующую оперативную информацию:</p>
+            <ul>
+                <liТекущее местоположении каждой машины</li>
+                <li>GPS координаты, время фактического маршрута</li>
+                <li>Общий текущий процент сдачи по всем рейсам дня</li>
+            </ul>
+            <p>Модуль отслеживания выполнения заявок на доставку позволяет как специалистам логистической компании,
+            так и представителям контрагентам отслеживать степень исполнения заявок на доставку посредством Интернет.
+            Система позволяет отслеживать текущий статус отдельных рейсов, заявок на доставку.</p>"
+    capabilities6: "
+            <h3>Ручное планирование маршрутов</h3>
+            <p></p>"
+    characteristics1: "
+            <p>Мы не используем <strong>генетические алгоритмы</strong> которые дают приемлемые результаты отработав достаточно большое количество времени,
+            стоит понимать, что такие решения, за счет своей специфики, могут так и не построить достаточно оптимальные маршруты,
+            если не проработают довольно долго (10-ки минут). Хотя, стоит отметить, что для решения небольших задач (до 100 заказов)
+            такие решения будут давать хорошие результаты за небольшое время.</p>
+
+            <p>Наш инновационный алгоритм расчета является «ноу-хау» нашей компании и превосходит по скорости любые другие решения.
+            Например, маршрут для <strong>2000 заказов и автопарка из 200 автомобилей</strong>, с учетом всех возможных ограничений будет
+            посчитан и оптимизирован приблизительно за <strong>40 секунд</strong>, 1000 заказов и 100 машин — приблизительно 10 секунд.</p>
+
+            <p>Такие показатели скорости работы дают возможность быстро пересчитывать маршруты если изменились какие-либо
+            характеристики расчета (добавился заказ, машина стала на ремонт, появились новые «желаемые окна доставки» и проч.)
+            и делает ручное планирование малоэффективным и даже вредным. Наш опыт внедрения полностью доказал этот тезис.</p>"
+    characteristics2: "
+        <h3>Некоторые из условий и ограничений расчета:</h3>
+        <ul>
+            <li>Ограничения дорожного движения (одностороннее движение, запреты поворотов и проч.)</li>
+            <li>Пробочная статистика</li>
+            <li>Скорости на различных типах дорог</li>
+            <li>Желаемые окна доставки</li>
+            <li>VIP-клиент — таким клиентам заказ доставляется в первую очередь</li>
+            <li>Интервалы обслуживания и график работы точки разгрузки (например, с 8:00 до 12:00 планируемое время разгрузки 15 минут,
+                с 12:00 до 19:00 — 45 минут, таких интервалов может быть сколь угодно много, что позволяет очень гибко учитывать временные нюансы)
+            </li>
+            <li>Учет объемно-весовых характеристик транспорта и груза</li>
+            <li>Контроль перегрузок</li>
+            <li>Контроль совместимости грузов</li>
+            <li>Контроль возможности принятия контрагентом машины определенной грузоподъемности</li>
+            <li>Учет желаемых геозон при построении маршрутов для каждого водителя</li>
+            <li>Учет максимального количества пунктов в маршруте</li>
+            <li>Учет времени работы склада или распределительного центра (пункта погрузки)</li>
+            <li>Учет длительности рабочего дня водителя</li>
+            <li>Учет тарифных зон</li>
+            <li>Учет пропусков в определенные зоны для каждого водителя</li>
+        </ul>"
+    ddt1: "
+        <p>Для любой компании важно использовать клиент-ориентированный подход. Для дистрибьютерских компаний это означает
+        выполнение обещаний по доставке продукции к определенному времени, которое задается клиентом.
+        Очевидно, что чем уже это «желаемое временное окно», тем сложнее логисту составить рейс.
+        В этом месте возникают разногласия между отделами продаж и логистики.</p>
+
+        <p>Сервис <strong>RoutePlanner</strong> позволяет решать эту задачу затрачивая минимум усилий на планирование и споры.
+        Отдел продаж при формировании заявок просто указывает желаемое время доставки,
+        которое автоматически будет учтено при построении и оптимизации маршрутов.</p>
+
+        <p>Так же одним из способов повышения лояльности является параметр VIP-клиент. Если такие клиенты присутствуют,
+        маршруты формируются таким образом, чтобы посетить VIP-клиенты в первую очередь.</p>
+
+        <p>Использование «желаемого времени доставки» и VIP-клиент являются необязательными функциями,
+        но их применение несомненно повысит лояльность клиента к компании.</p>"
+    faq1: "
+        <h3>Для каких компаний предназначен сервис RoutePlanner?</h3>
+        <p>Компании, чьи бизнес-процессы требуют реализовывать ежедневные рейсы с большим количеством точек посещения/разгрузки.
+        Компании группы <strong>FMCG</strong> (<strong>F</strong>ast <strong>M</strong>oving <strong>C</strong>onsumer <strong>G</strong>oods),
+        инкассация, компании сервисного обслуживания, почта, вывоз мусора, интернет-магазины и проч.</p>"
+    faq2: "
+        <h3>Сколько это стоит?</h3>
+        <p>Стоимость использования сервиса рассчитывается от того количества транспорта, которое вы планируете использовать каждый день.
+        Подробности можно узнать в разделе Цены.</p>"
+    faq3: "
+        <h3>Как начать использовать сервис RoutePlanner?</h3>
+        <p>Очень просто, для этого необходимо связаться с нами. Контактная информация находится здесь.</p>"
+    faq4: "
+        <h3>Как быстро происходит расчет маршрутов?</h3>
+        <p>Время расчета маршрутов зависит от количества автотранспорта, точек посещения, введенных ограничений и проч.
+        Но тем не менее расчет длится недолго. Например, маршруты для 100 автомобилей наш сервис построит меньше чем за 10 секунд,
+        для 200 автомобилей — около 40 секунд, ну а для небольшого автопарка 20-50 машин расчет занимает пару секунд.</p>"
+    why1: "
+        <h3>5 фактов выгодно отличающие нас от конкурентов:</h3>
+        <ol>
+            <li>Скорость работы и качество оптимизации.</li>
+            <li>Оплата зависит только от количества автомобилей, без ограничений на количество пунктов в день или количества оптимизаций.</li>
+            <li>Нет ограничений по использованию API или количества пользователей системы.</li>
+            <li>Весь функционал доступен сразу и навсегда.</li>
+            <li>Большое количество разнообразных параметров (объемно-весовые характеристики, окна доставки, учет рабочего времени,желаемое время доставки и проч)</li>
+        </ol>
+
+        <p>Все наши сотрудники имеют огромный опыт в разработке сложных алгоритмических решений. Для нас важен каждый клиент.
+        Мы всегда готовы обсуждать различные индивидуальные условия использования нашего сервиса.</p>
+
+        <h3>Бонусы от использования:</h3>
+        <ul>
+            <li>Сокращение расходов на 20-25%</li>
+            <li>Контроль перегрузки машин</li>
+            <li>Учет временных окон доставки заказа</li>
+            <li>Повышение уровня обслуживания клиентов</li>
+            <li>Сокращение сроков поставки</li>
+            <li>Отказ от “ручного” расчета и планирования</li>
+            <li>Нет необходимости инвестировать значительные средства на приобретение, обновление и поддержку работоспособности ПО и аппаратной платформы</li>
+            <li>Стоимость внедрения составляет 0.0</li>
+        </ul>
+
+        Если у вас появились любые вопросы, пожалуйста свяжитесь с нами: <a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a>"
+    pricing1: "
+      <h3>Стоимость услуг</h3>
+      <p>Сервис поставляется в формате SaaS (Сервис в аренду). Вы платите ежемесячную плату и используете все возможности сервиса <strong>RoutePlanner</strong>.</p>"
+    pricing2: "Автопарк от 0 до 50 машин"
+    pricing3: "Автопарк от 51 до 100 машин"
+    pricing4: "Автопарк от 101 до 150 машин"
+    pricing5: "Автопарк неограничен"
+    pricing6: "Стоимость в месяц при ежегодной оплате за 1 единицу транспорта"
+    pricing7: "Стоимость в месяц при ежемесячной оплате за 1 единицу транспорта"
+    pricing8: "Количество пунктов в день"
+    pricing9: "Количество маршрутов в день"
+    pricing10: "Автоматическое геокодирование контрагентов"
+    pricing11: "Доступ к API"
+    pricing12: "Интеграция с ERP системами"
+    pricing13: "Интеграция с GPS мониторингом"
+    pricing14: "Использование модуля мониторинга на смартфонах водителей"
+    pricing15: "без ограничений"
+    contacts1: "
+        <p>Несмотря на то, что планирование маршрутов это та часть бизнеса, которая трудно поддается оптимизации,
+        мы постарались сделать наш сервис простым, удобным и функциональным.</p>
+        <p>SНачните пользоваться сервисом уже сегодня. Вы получите удобство и экономию. Возможно,
+        это поможет взглянуть на транспортные потоки в Вашей компании под другим углом. Логистика станет ближе и нагляднее.</p>
+        <p><strong>Логистика может быть простой!</strong></p>
+        <p>С уважением, разработчики <strong>RoutePlanner</strong></p>
+        <p><a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a></p>
+        <hr/>
+        <div style='float:right'>
+            <p><strong>Республика Беларусь</strong>, г. Минск, +375(29)7785023</p>
+        </div>
+        <div>
+            <p><strong>Российская Федерация</strong>, г. Москва,  Новый Арбат 19, 215.</p>
+            <p>+7 916 621 45 58; 8 (499) 148 13 45;</p>
+            <p>+7 985 774 02 05</p>
+        </div>"
+  en:
+    product: "Product"
+    capabilities: "Capabilities"
+    characteristics: "Algorithm characteristics"
+    ddt: "Desired delivery time"
+    faq: "FAQ"
+    why: "Why ThoriumSoft"
+    pricing: "Pricing"
+    customers: "Customers"
+    contacts: "Contacts"
+    routeplanner: "RoutePlanner"
+    getStartedToday: "Get Started Today"
+    startTrial: "Start trial"
+    contactSales: "Contact sales"
+    productInformation: "Product information"
+    copyright: "@ Copyright 2015 ThoriumSoft. All rights reserved. Use of this web site constitutes acceptance of The Terms of Use and Privacy Policy."
+    index1: "
+       <p>Service <strong>RoutePlanner</strong>, provided by the company <strong>ThoriumSoft</strong> effectively calculates the route and
+          schedule traffic, reduces transportation costs and increases the efficiency of the vehicle fleet.</p>
+
+       <p>Software of <strong>ThoriumSoft</strong> company can be easily configured to handle a wide range of transport constraints that arise at
+          work.</p>"
+    index2: "
+       <p>Since the service <strong>RoutePlanner</strong> is a web application, all that is needed - is to connect to the
+          Internet to address counterparty information about the fleet and order information - everything else the
+          service will do for you. We have developed the most simple and user-friendly interface. Even complex
+          operations are performed in “two clicks“.<strong> Route calculation takes only 10-15 seconds.</strong> Therefore, you can
+          easily plan graphs hydrating for many days to come.</p>"
+    index3: "
+       <p>The use of high-quality optimization algorithms developed specifically to address the transport operations, will allow
+          maximum accuracy to ensure efficient delivery of goods, to calculate the exact travel time and the optimal use of drivers time.</p>"
+    index5: "SERVICE TO OPTIMIZE"
+    index6: "DISTRIBUTION LOGISTICS"
+    index7: "DO YOU WANT TO INCREASE YOUR PROFITS"
+    index8: "AND SAVE TIME?"
+    capabilities0: "
+          <p>We are constantly adding new features based on the wishes of our customers. <strong>All</strong> the added functionality
+            <strong>is immediately available</strong> to other customers of our service without additional surcharges. Listed below
+            are just some features of the service <strong>RoutePlanner</strong>.</p>"
+    capabilities1: "
+            <h3>AUTOMATIC SCHEDULING OF THE MOVEMENT OF GOODS AND FREIGHT</h3>
+            <p>Automatic scheduling the movement of goods and cargo enables <strong>distribution/express/service</strong> companies
+                dramatically reduce the time of planning.</p>
+
+            <p>Using the service <strong>RoutePlanner</strong> it is possible to automatically generate routes for all your fleet
+                of transport unit at the same time, and will select the optimal number of machines, subject to a set of constraints,
+                which are quite difficult to control man.</p>"
+    capabilities2: "
+            <h3>OPTIMIZATION OF TRAFFIC ROUTES</h3>
+            <p>The result of the algorithm of automatic planning are optimized routes for each unit of transport, with an
+               indication of the order of visits couteragents in the same flight and indicating the planned arrival time.</p>"
+    capabilities3: "
+            <h3>CONTROL THE VOLUME-WEIGHTED PERFORMANCE OF VEHICLES</h3>
+            <p>When calculating the optimal routes, necessarily take into account the dimensions of the load (weight, volume)
+                                and is monitored load of the body.</p>"
+    capabilities4: "
+            <h3>AUTOMATIC GEOCODING ADDRESSES COUNTERAGENTS</h3>
+            <p>All available counteragents addresses can be loaded into the system automatically. <strong>RoutePlanner</strong>
+               recognizes most addresses. If the address is set incorrectly, or it is not yet in the map (new streets, new shops and so on),
+               the system marks them and prompt the user to perform manual adjustment. Manual adjustment mode has a very simple and
+               friendly user-interfacem the system constantly helps the user in this mode, so that manual editing will not take long.</p>"
+    capabilities5: "
+            <h3>TRANSPORT MONITORING MODULE</h3>
+            <p>Transport monitoring module works on smartphones drivers in delivery and allows you to receive the following operation
+                information:</p>
+            <ul>
+                <li>The current location of each car</li>
+                <li>GPS coordinates, the actual route</li>
+                <li>The total current pass rate for all cruises of the day</li>
+            </ul>
+            <p>Tracing module execution orders for delivery allows both professionals and Logistics, and representatives
+                of the contractors to monitor the degree of execution of orders for delivery via the Internet. The system
+                allows you to track the current status of individual flights, reguests for delivery.</p>"
+    capabilities6: "
+            <h3>MANUAL ROUTE PLANNING</h3>
+            <p></p>"
+    characteristics1: "
+            <p> We do not use <strong>genetic algorithms</strong> that give acceptable results after working quite a lot of time, it is
+                necessary to understand that such decisions, due to their very nature, can never build enough optimal routes, if not
+                worked for a long time (10 minutes). Although it should be noted that to solve small problems (up to 100 orders), such
+                decision will give good results in short time.</p>
+
+            <p>Our innovative algorithm for calculating a 'know-how' of our company and faster than the any other solutions. For
+                example, to route orders in <strong>2000</strong> and a fleet of <strong>200</strong> vehicles, taking into account
+                all possible restrictions will be counted and is optimized for approximately <strong>40 seconds</strong>, 1000 orders and 100
+                vehicles - about 10 seconds.</p>
+
+            <p>Such indicators allow speed quickly recalculates the route if you change any of the characteristics calculation (add the order,
+                the car was in the repair, new 'desired delivery windows' and so on). And makes the manual planning ineffective and even
+                harmful. Our experience in implementing fully proved the thesis.</p>"
+    characteristics2: "
+        <h3>SOME OF THE CONDITIONS AND RESTRICTIONS OF CALCULATION:</h3>
+        <ul>
+            <li>Limitations of traffic (one-way traffic, turn restrictions, etc.)</li>
+            <li>Traffic jams statistics</li>
+            <li>Speed on various types of roads</li>
+            <li>Desired delivery window</li>
+            <li>VIP-client - so the order is delivered to customers in the first place</li>
+            <li>Service intervals and schedule point of discharge (eg, from 8:00 to 12:00 planned discharge time of 15 minutes,
+                from 12:00 to 19:00 - 45 minutes of intervals can be any number, which makes it very flexible to take into account
+                the time nuances)
+            </li>
+            <li>Accounting for body-weight characteristics of transport and cargo</li>
+            <li>Congestion control</li>
+            <li>Control compatibility goods</li>
+            <li>Control of the possibility of adopting a specific counterparty-duty machines</li>
+            <li>Accounting desired geozones on your routes for each driver</li>
+            <li>Accounting for the maximum number of points in the route</li>
+            <li>Time management of the warehouse or distribution center (point of loading)</li>
+            <li>Given the long working hours of the driver</li>
+            <li>Accounting for tariff zones</li>
+            <li>Accounting gaps in certain areas for each driver</li>
+        </ul>"
+    ddt1: "
+        <p>For any company, it is important to use client-oriented approach. For distribution companies this means keeping
+            promises for product delivery by a certain time, which is given by the client. Obviously, the longer is the 'desired time
+            window', the harder logisticians to make the flight. At this point, there are differences between sales and logistics.</p>
+
+        <p>Service <strong>RoutePlanner</strong> can solve this problem spending a minimum of effort on planning and controversy. Sales
+            department in the formation of applications simply specifies the desired delivery time, which will automatically be taken
+            into account in the design and optimization of routes.</p>
+
+        <p>Just one of the ways to increase the loyalty of a parameter VIP-clients. If such clients routes formed so the the
+            VIP-clients visit first.</p>
+
+        <p>Using the 'desired delivery time' and VIP-client functions are optional, but their use will undoubtedly increase customer
+            loyalty to the company.</p>"
+    faq1: "
+        <h3>FOR WHICH COMPANIES SERVICE DESIGNED ROUTEPLANNER?</h3>
+        <p>Companies whose business process required to implement daily flights with a lot of points visits/unloading. Group
+            companies FMCG (Fast Moving Consumer Goods), collections, company service, mail, garbage, online shopping and so on.</p>"
+    faq2: "
+        <h3>HOW MUCH DOES THAT COST?</h3>
+        <p>The cost of using the service is calculated from the amount of transport that you want to use every day. Details can be
+            found in the price.</p>"
+    faq3: "
+        <h3>HOW TO START TO USE THE SERVICE ROUTEPLANNER?</h3>
+        <p>Very simply, it is necessary to contact us. Contact information ca be found here.</p>"
+    faq4: "
+        <h3>HOW LONG DOES IT CALCULATE ROUTE?</h3>
+        <p>When calculating your route depends on the number of vehicles, visit points imposed constraints and so on.
+            Nevertheless the calculation does not last long. For example, routes for 100 cars build service in less than
+            10 seconds for 200 cars - about 40 seconds, well, for a small fleet of 20-50 cars calculation take a couple of seconds.</p>"
+    why1: "
+        <h3>5 THINGS SET US APPART FROM THE COMPETITION:</h3>
+        <ol>
+            <li>The speed and quality optimization.</li>
+            <li>Payment depends only on the number of vehicles, without restrictions on the number of points per day and number of optimizations.</li>
+            <li>There are no restrictions on the use of the API or the number of users of the system.</li>
+            <li>All functionality is available immediately and forever.</li>
+            <li>A large number of different parameters (volume and weight characteristics, windows of delivery, time tracking, desired delivery time,
+                etc.)
+            </li>
+        </ol>
+
+        <p>All our employees have extensive experience in the development of complex algorithmic solutions.
+            For us, every client is important. We are always willing to discuss a variety of individual conditions of use of our service.</p>
+
+        <h3>BONUSES OF USE:</h3>
+        <ul>
+            <li>Reduce costs by 20-25%</li>
+            <li>Vehicle overload control</li>
+            <li>Account for order delivery windows</li>
+            <li>Improved customer service</li>
+            <li>Reduced delivery time</li>
+            <li>No need to invest heavily in acquisition and support of software and hardware platform</li>
+            <li>Zero cost of embedding</li>
+        </ul>
+
+        If you have any questions please contact <a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a>"
+    pricing1: "
+      <h3>Cost of Services</h3>
+      <p>Service is delivered in the format of SaaS (Service rent). You pay a monthly fee and use all the features of the service
+        <strong>Routeplanner</strong>.</p>"
+    pricing2: "Car from 0 to 50 cars"
+    pricing3: "Car from 51 to 100 cars"
+    pricing4: "Fleet from 101 to 150 cars"
+    pricing5: "Car unlimited"
+    pricing6: "Cost per month with an annual payment of 1 unit of transport"
+    pricing7: "The cost per month at a monthly payment for one unit of transport"
+    pricing8: "Number of routes per day"
+    pricing9: "Number of items per day"
+    pricing10: "Automatic geocoding"
+    pricing11: "API access"
+    pricing12: "Integration with ERP systems"
+    pricing13: "Integration with GPS monitoring"
+    pricing14: "Using the monitoring module smartphones drivers"
+    pricing15: "no restriction"
+    contacts1: "
+        <p>Despite the fact that the route planning is the part of the business that is difficult to optimize, we tried to make our service simple,
+            comfortable and functional.</p>
+        <p>Start using the service today. You get the convenience and cost savings. Perhaps it would help to look at the traffic flow in your company
+            from another angle.
+            Logistics will become closer and clearer.</p>
+        <p><strong>Logistics can be simple!</strong></p>
+        <p>Sincerely, developers <strong>RoutePlanner</strong></p>
+        <p><a href='mail:support@thoriumsoft.com'>support@thoriumsoft.com</a></p>
+        <hr/>
+        <div style='float:right'>
+            <p><strong>The Republic of Belarus</strong>, Minsk, Lynkova 87A, 1.</p>
+            <p>+375 (29) 7785023</p>
+        </div>
+        <div>
+            <p><strong>The Russian Federation</strong>, Moscow, Novy Arbat 19, 215.</p>
+            <p>+7 916 621 45 58; 8 (499) 148 13 45;</p>
+            <p>+7 985 774 02 05</p>
+        </div>"
