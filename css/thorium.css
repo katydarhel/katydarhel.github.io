@@ -82,3 +82,23 @@ h3 {
 #customers img {
     padding: 0;
 }
+
+@media (max-width: 767px) {
+    #logo {
+        height: 30px;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    #logo {
+        height: 49px;
+    }
+}
