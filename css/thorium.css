@@ -39,7 +39,8 @@
     position: absolute;
     font-family: MagistralC, sans-serif;
     font-weight: normal;
-    font-size: 47px;
+    /*font-size: 47px;*/
+    font-size: 0;
     background-color: #01ca9e;
     color: #f9faf9;
     line-height: 1;
@@ -58,7 +59,8 @@
     position: absolute;
     font-family: Franklin, sans-serif;
     font-weight: normal;
-    font-size: 63px;
+    /*font-size: 63px;*/
+    font-size: 0;
     color: #01ca9e;
 }
 
