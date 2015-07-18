@@ -67,16 +67,16 @@ h3 {
     color: #6197b8;
 }
 
-.panel {
+.highlighted {
     background-color: #EFF2F9;
     border-radius: 8px;
     padding-left: 20px;
-    padding-bottom: 3px;
+    padding-right: 5px;
 }
 
 #capabilities img {
-    margin-top:15px;
-    margin-bottom:15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #customers img {
