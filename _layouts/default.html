@@ -13,13 +13,16 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
+{%if page.url contains '/en'%} {%assign prefix = '/en'%} {%endif%}
+{%assign pageurl = page.url|remove:'/en'%}
+
 <body>
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
     <div style="float: right; font-size: 18px; padding: 20px; margin-top:4px;">
-        <a class="ru" href="{{page.url|remove:'/en'}}" style="text-decoration: none;">RU</a> &nbsp;<a class="en" href="/en{{page.url|remove:'/en'}}" style="text-decoration: none;">EN</a></div>
+        <a class="ru" href="{{pageurl}}" style="text-decoration: none;">RU</a> &nbsp;<a class="en" href="/en{{pageurl}}" style="text-decoration: none;">EN</a></div>
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" style="height: 70px; padding-left: 0; margin-top: -7px;" href="{%if page.url contains '/en'%}/en{%endif%}/">
+            <a class="navbar-brand" style="height: 70px; padding-left: 0; margin-top: -7px;" href="{{prefix}}/">
                 <img id="logo" alt="ThoriumSoft" src="/images/ThoriumSoft_logo.png">
             </a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="margin-top: 18px;">
@@ -37,16 +40,16 @@
                         {{site.msg[page.lang].product}}<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/capabilities.html">{{site.msg[page.lang].capabilities}}</a></li>
-                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/characteristics.html">{{site.msg[page.lang].characteristics}}</a></li>
-                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/ddt.html">{{site.msg[page.lang].ddt}}</a></li>
-                        <li><a href="{%if page.url contains '/en'%}/en{%endif%}/faq.html">{{site.msg[page.lang].faq}}</a></li>
+                        <li><a href="{{prefix}}/capabilities.html">{{site.msg[page.lang].capabilities}}</a></li>
+                        <li><a href="{{prefix}}/characteristics.html">{{site.msg[page.lang].characteristics}}</a></li>
+                        <li><a href="{{prefix}}/ddt.html">{{site.msg[page.lang].ddt}}</a></li>
+                        <li><a href="{{prefix}}/faq.html">{{site.msg[page.lang].faq}}</a></li>
                     </ul>
                 </li>
-                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/why.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].why}}</a></li>
-                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/pricing.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].pricing}}</a></li>
-                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/customers.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].customers}}</a></li>
-                <li><a href="{%if page.url contains '/en'%}/en{%endif%}/contacts.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].contacts}}</a></li>
+                <li><a href="{{prefix}}/why.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].why}}</a></li>
+                <li><a href="{{prefix}}/pricing.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].pricing}}</a></li>
+                <li><a href="{{prefix}}/customers.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].customers}}</a></li>
+                <li><a href="{{prefix}}/contacts.html" style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">{{site.msg[page.lang].contacts}}</a></li>
                 <li><a href="http://routeplanner.thoriumsoft.com" style="line-height: 40px; font-size: 18px; padding-left: 11px;padding-right: 11px;">{{site.msg[page.lang].routeplanner}}</a></li>
                 <!--a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-\h"></span> Search</a-->
             </ul>
@@ -59,7 +62,7 @@
 <div class="container-fluid text-center block-margin" style="background: #dbe4f4;padding-top: 20px;padding-bottom: 20px;">
     <p><strong>{{site.msg[page.lang].getStartedToday}}</strong></p>
     <button type="button" class="btn btn-warning" style="text-transform: uppercase;">{{site.msg[page.lang].startTrial}}</button>
-    <a href="{%if page.url contains '/en'%}/en{%endif%}/contacts.html" type="button" class="btn btn-info" style="text-transform: uppercase;">{{site.msg[page.lang].contactSales}}</a>
+    <a href="{{prefix}}/contacts.html" type="button" class="btn btn-info" style="text-transform: uppercase;">{{site.msg[page.lang].contactSales}}</a>
 </div>
 
 <div class="container-fluid footer">
@@ -67,10 +70,10 @@
         <div style="display:inline-block;color:#4AD1D5; font-size:20px; border-bottom:1px solid #4AD1D5; padding-bottom:1px;">{{site.msg[page.lang].productInformation}}</div>
         <div></div>
         <div style="margin-top:15px;border-bottom:2px solid white; padding-bottom:5px;font-weight: bold;font-size:18px;">
-            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/capabilities.html">{{site.msg[page.lang].capabilities}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/characteristics.html">{{site.msg[page.lang].characteristics}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/ddt.html">{{site.msg[page.lang].ddt}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="color:white;" href="{%if page.url contains '/en'%}/en{%endif%}/faq.html">{{site.msg[page.lang].faq}}</a>
+            <a style="color:white;" href="{{prefix}}/capabilities.html">{{site.msg[page.lang].capabilities}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{{prefix}}/characteristics.html">{{site.msg[page.lang].characteristics}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{{prefix}}/ddt.html">{{site.msg[page.lang].ddt}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a style="color:white;" href="{{prefix}}/faq.html">{{site.msg[page.lang].faq}}</a>
         </div>
         <div style="margin-top: 20px;">
             <img src="/images/ThoriumSoft_logo_gray.png">
