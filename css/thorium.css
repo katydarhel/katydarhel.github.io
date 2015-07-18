@@ -8,22 +8,12 @@
 }
 
 .text {
-    font-family: Open Sans, serif; /*Tunga*/
+    font-family: sans-serif; /*Tunga*/
     font-style: normal;
     font-size: 17px;
     line-height: 1.8;
     color: #646469;
     text-align: justify;
-}
-
-@font-face {
-    font-family: "Franklin";
-    src: url("../font/Franklin.ttf")
-}
-
-@font-face {
-    font-family: "MagistralC";
-    src: url("../font/MagistralC.ttf")
 }
 
 .en:lang(en), .ru:lang(ru) {
@@ -40,9 +30,14 @@
     display: inline-block;
 }
 
+@font-face {
+    font-family: "MagistralC";
+    src: url("../font/MagistralC.ttf")
+}
+
 .caption-overlay {
     position: absolute;
-    font-family: MagistralC, monospace;
+    font-family: MagistralC, sans-serif;
     font-weight: normal;
     font-size: 47px;
     background-color: #01ca9e;
@@ -54,9 +49,14 @@
     padding-right: 4px;
 }
 
+@font-face {
+    font-family: "Franklin";
+    src: url("../font/Franklin.ttf")
+}
+
 .label-overlay {
     position: absolute;
-    font-family: Franklin, monospace;
+    font-family: Franklin, sans-serif;
     font-weight: normal;
     font-size: 63px;
     color: #01ca9e;
