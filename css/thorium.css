@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: "MagistralC";
-    src: url("../font/MagistralC-Bold.woff");
+    src: url("../font/MagistralC-Bold.otf");
 }
 
 .caption-overlay {
@@ -51,7 +51,7 @@
 
 @font-face {
     font-family: "Franklin";
-    src: url("../font/FranklinGothicDemiCondC.woff");
+    src: url("../font/FranklinGothicDemiCondC.otf");
 }
 
 .label-overlay {
