@@ -32,8 +32,8 @@
 
 @font-face {
     font-family: "MagistralC";
-    /*src: url('/font/MagistralC-Bold.otf') format('opentype'), url('/font/MagistralC-Bold.woff') format('woff');*/
-    src: url('/font/MagistralC-Bold.otf') format('opentype');
+    src: url('/font/MagistralC-Bold.otf') format('opentype'), url('/font/MagistralC-Bold.woff') format('woff');
+    /*src: url('/font/MagistralC-Bold.otf') format('opentype');*/
 }
 
 .caption-overlay {
@@ -52,8 +52,8 @@
 
 @font-face {
     font-family: "Franklin";
-    /*src: url('/font/FranklinGothicDemiCondC.otf') format('opentype'), url('/font/FranklinGothicDemiCondC.woff') format('woff');*/
-    src: url('/font/FranklinGothicDemiCondC.otf');
+    src: url('/font/FranklinGothicDemiCondC.otf') format('opentype'), url('/font/FranklinGothicDemiCondC.woff') format('woff');
+    /*src: url('/font/FranklinGothicDemiCondC.otf');*/
 }
 
 .label-overlay {
