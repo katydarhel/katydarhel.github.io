@@ -33,7 +33,7 @@
 @font-face {
     font-family: "MagistralC";
     /*src: url('/font/MagistralC-Bold.otf') format('opentype'), url('/font/MagistralC-Bold.woff') format('woff');*/
-    src: url('/font/MagistralC-Bold.woff');
+    src: url('/font/MagistralC-Bold.woff') format('woff');
 }
 
 .caption-overlay {
@@ -53,7 +53,7 @@
 @font-face {
     font-family: "Franklin";
     /*src: url('/font/FranklinGothicDemiCondC.otf') format('opentype'), url('/font/FranklinGothicDemiCondC.woff') format('woff');*/
-    src: url('/font/FranklinGothicDemiCondC.woff');
+    src: url('/font/FranklinGothicDemiCondC.woff') format('woff');
 }
 
 .label-overlay {
