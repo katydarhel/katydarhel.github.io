@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/thorium.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,cyrillic" type="text/css" media="all" />
-    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 </head>
 
 {%if page.url contains '/en'%} {%assign prefix = '/en'%} {%endif%}
@@ -34,7 +33,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="/index.html"
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{prefix}}/"
                        style="line-height: 40px; font-size: 18px; padding-left: 10px;padding-right: 10px;">
                         {{site.msg[page.lang].product}}<span class="caret"></span>
                     </a>
@@ -110,5 +109,6 @@
     ga('create', 'UA-10323629-6', 'auto');
     ga('send', 'pageview');
 </script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
