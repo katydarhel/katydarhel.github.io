@@ -197,6 +197,7 @@ msg:
     pricing13: "Интеграция с GPS мониторингом"
     pricing14: "Использование модуля мониторинга на смартфонах водителей"
     pricing15: "без ограничений"
+    pricing16: "<a href=\"/contacts.html\">Свяжитесь с нами</a>"
     contacts1: "
         <p>Несмотря на то, что планирование маршрутов это та часть бизнеса, которая трудно поддается оптимизации,
         мы постарались сделать наш сервис простым, удобным и функциональным.</p>
@@ -403,6 +404,7 @@ msg:
     pricing13: "Integration with GPS monitoring"
     pricing14: "Using the monitoring module smartphones drivers"
     pricing15: "no restriction"
+    pricing16: "<a href=\"/en/contacts.html\">Contact us</a>"
     contacts1: "
         <p>Despite the fact that the route planning is the part of the business that is difficult to optimize, we tried to make our service simple,
             comfortable and functional.</p>
