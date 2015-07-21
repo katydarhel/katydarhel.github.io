@@ -8,7 +8,7 @@
 }
 
 .text {
-    font-family:  Open Sans, sans-serif; /*Tunga*/
+    font-family: Open Sans, sans-serif; /*Tunga*/
     font-style: normal;
     font-size: 17px;
     line-height: 1.8;
@@ -109,8 +109,12 @@ h3 {
     font-size: 18px;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) {
     .dropdown:hover .dropdown-menu {
         display: block;
     }
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #e7e7e7;
 }
