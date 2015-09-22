@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="/thorium.css">-->
+    <style>
+        .image-wrapper {
+            display: inline-block;
+            position: relative;
+            max-width: 100%;
+        }
+        .label-overlay {
+            position: absolute;
+            font-family: Franklin, monospace;
+            font-weight: normal;
+            font-size: 63px;
+            color: #01ca9e;
+        }
+    </style>
+    <script>
+        function setFontSize() {
+            $(".label-overlay").css({'font-size': $("#image").width() / 30});
+        }
+        $(window).load(function () {
+            setFontSize();
+            $(window).resize(function () {
+                setFontSize();
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="container-fluid" style="background-color:#003238; text-align:center;">
+    <div class="image-wrapper">
+        <img id="image" class="img-responsive" src="images/banner_Service_to_optimize.jpg" alt=""/>
+
+        <div class="label-overlay" style="top:10%; left:24%;/">Сервис для оптимизации</div>
+        <div class="label-overlay" style="top:27%; left:24%;/">распределительной логистики</div>
+    </div>
+</div>
+</body>
+</html>
