@@ -28,7 +28,7 @@ msg:
     startTrial: "Попробовать бесплатно"
     contactSales: "Контакты"
     productInformation: "Информация о продукте"
-    copyright: "&#169; ООО ТориумСофт, 2015."
+    copyright: "&#169; ООО ТориумСофт, 2016."
     index1: "
         <p>Сервис <strong>RoutePlanner</strong>, предоставляемый компанией <strong>ТориумСофт</strong>, позволяет
             эффективно рассчитать маршруты и график перевозок,
@@ -229,7 +229,7 @@ msg:
     startTrial: "Start trial"
     contactSales: "Contact sales"
     productInformation: "Product information"
-    copyright: "&#169; Copyright 2015 ThoriumSoft. All rights reserved. Use of this web site constitutes acceptance of The Terms of Use and Privacy Policy."
+    copyright: "&#169; Copyright 2016 ThoriumSoft. All rights reserved. Use of this web site constitutes acceptance of The Terms of Use and Privacy Policy."
     index1: "
        <p>Service <strong>RoutePlanner</strong>, provided by the company <strong>ThoriumSoft</strong> effectively calculates the route and
           schedule traffic, reduces transportation costs and increases the efficiency of the vehicle fleet.</p>
